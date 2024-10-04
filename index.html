@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Forum</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=62856&format=png&color=FFFFFF"
+      type="image/x-icon"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Daisy Ui & Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Box Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#797DFC",
+              "primary-light": "#797DFC1A",
+              secondary: "#12132D",
+            },
+            fontFamily: {
+              mulish: "Mulish",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-mulish">
+    <!-- Nav Section -->
+    <nav class="bg-white sticky top-0">
+      <section class="max-w-7xl mx-auto p-5 flex items-center justify-between">
+        <h1 class="font-[900] text-2xl md:text-3xl">ReTro</h1>
+        <div class="flex items-center justify-center gap-3">
+          <div class="space-x-1">
+            <button
+              class="btn text-xl rounded-full btn-outline w-12 h-12 border-gray-300 text-gray-600"
+            >
+              <i class="bx bx-home-alt-2"></i>
+            </button>
+
+            <button
+              class="btn text-xl rounded-full btn-outline w-12 h-12 border-gray-300 text-gray-600"
+            >
+              <i class="bx bx-pencil"></i>
+            </button>
+
+            <button
+              class="btn text-xl rounded-full btn-outline w-12 h-12 border-gray-300 text-gray-600"
+            >
+              <i class="bx bx-user"></i>
+            </button>
+
+            <button
+              class="btn text-xl rounded-full btn-outline w-12 h-12 border-gray-300 text-gray-600"
+            >
+              <i class="bx bx-flag"></i>
+            </button>
+          </div>
+          <button class="btn font-bold rounded-full bg-primary text-white px-6">
+            Sign In
+          </button>
+        </div>
+      </section>
+    </nav>
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
