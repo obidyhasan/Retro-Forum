@@ -26,15 +26,11 @@ const showPosts = (posts) => {
               src="${post.image}"
             />
           </div>
-          ${
-            post.isActive
-              ? `<div
-            class="w-4 h-4 bg-green-500 rounded-full absolute -right-1 -top-1 border-2 border-white"
-          ></div>`
-              : `<div
-            class="w-4 h-4 bg-red-500 rounded-full absolute -right-1 -top-1 border-2 border-white"
-          ></div>`
-          }
+          <div
+            class="w-4 h-4 ${
+              post.isActive ? "bg-green-500" : "bg-red-500"
+            } rounded-full absolute -right-1 -top-1 border-2 border-white"
+          ></div>
           
         </div>
         <!--  -->
@@ -109,6 +105,13 @@ const showReadPosts = (description = "", viewCount = 0) => {
     </div>
   `;
   readPostContainer.appendChild(item);
+  increaseReadCount();
+};
+
+const increaseReadCount = () => {
+  const count = document.querySelector("#countRead");
+  const countValue = parseInt(count.innerText) + 1;
+  count.innerText = countValue;
 };
 
 // Get Latest Post Using API
